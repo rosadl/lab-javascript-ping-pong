@@ -1,22 +1,66 @@
 body {
+  margin: 0;
+  padding: 0;
+  /*z-index: 0;*/
 }
 
 #board {
+  width: cover;
+  height: 500px;
+  background-color: #006848;
+  border-radius: 25px;
+  border: solid 5px black;
+  /*z-index:0;*/
+  margin: 100px 3% 0;
+  box-shadow: 0px 0px 100px;
 }
 
 .paddle {
+
 }
 
 #paddle1 {
+  width: 15px;
+  height: 100px;
+  background-color: red;
+  float: left;
+  margin-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px;
 }
 
 #paddle2 {
+  width: 15px;
+  height: 100px;
+  background-color: blue;
+  float: right;
+  margin-right:20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px;
+}
+#start{
+  width: 50px;
+  height: 20px;
+  border: solid 5px blue;
+  color:blue;
+  border-radius: 2px;
+  background-color: white;
+  margin-top:10px;
 }
 
 #net {
+  height: 500px;
+  width: 15px;
+  background-color: white;
+  display: inline-block;
 }
 
 #ball {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  display: inline-block;
 }
 
 .score span {
@@ -28,7 +72,7 @@ body {
 .right {
 }
 
-button {
+.button {
 }
 
 #winner {
