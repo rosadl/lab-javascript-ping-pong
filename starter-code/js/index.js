@@ -1,8 +1,8 @@
 var board = new Board();
+var ball = new Ball();
 
 $("#start").click(function() {
   board.start();
-
 });
 //   activatePaddle2();
 //   var game = setInterval(updateState, intervalTime);
@@ -14,7 +14,7 @@ $("#start").click(function() {
 //
 // $(document).on('keydown', function(e){
 // });
-function moveListeners(event) {
+function movePaddle(event) {
   var keys = [38, 40];
   switch (event.keyCode) {
     case 38:
@@ -38,16 +38,19 @@ function moveListeners(event) {
 
 
 
+function renderBall(){
+    ball.move();
+}
 
 $(document).ready(function() {
 
-  document.addEventListener("keydown", moveListeners);
+  document.addEventListener("keydown", movePaddle);
+renderBall();
 
 
-
-    // function activatePaddle2() {
-    // }
-  });
+  // function activatePaddle2() {
+  // }
+});
 
 
 // function renderGame(){
@@ -56,8 +59,7 @@ $(document).ready(function() {
 // function renderScore(){
 // }
 //
-// function renderBall(){
-// }
-//
+
+
 // function renderPaddle(){
 // }
