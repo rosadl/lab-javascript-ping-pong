@@ -1,9 +1,10 @@
 var board = new Board();
 var ball = new Ball();
+var paddle = new Paddle();
 
 $("#start").click(function() {
   board.start();
-
+paddle.movePaddles();
 });
 //   activatePaddle2();
 //   var game = setInterval(updateState, intervalTime);
@@ -17,27 +18,6 @@ $("#start").click(function() {
 // });
 
 
-function movePaddle(event) {
-  var keys = [38, 40];
-  switch (event.keyCode) {
-    case 38:
-      if ($('#paddle1').css('margin-top') == '0px') {
-        alert("this movement is not posible");
-      } else {
-        $("#paddle1").css("margin-top", "-=10");
-      }
-      break;
-    case 40:
-      if ($('#paddle1').css('margin-top') == '400px') {
-        alert("this movement is not posible");
-      } else {
-        $("#paddle1").css("margin-top", "+=10");
-      }
-      break;
-  }
-
-}
-
 
 
 
@@ -47,7 +27,6 @@ function renderBall() {
 
 $(document).ready(function() {
 
-  document.addEventListener("keydown", movePaddle);
 
 
 //
