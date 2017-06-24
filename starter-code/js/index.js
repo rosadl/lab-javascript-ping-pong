@@ -3,6 +3,7 @@ var ball = new Ball();
 
 $("#start").click(function() {
   board.start();
+
 });
 //   activatePaddle2();
 //   var game = setInterval(updateState, intervalTime);
@@ -14,6 +15,8 @@ $("#start").click(function() {
 //
 // $(document).on('keydown', function(e){
 // });
+
+
 function movePaddle(event) {
   var keys = [38, 40];
   switch (event.keyCode) {
@@ -38,18 +41,19 @@ function movePaddle(event) {
 
 
 
-function renderBall(){
-    ball.move();
+function renderBall() {
+  ball.move();
 }
 
 $(document).ready(function() {
 
   document.addEventListener("keydown", movePaddle);
-renderBall();
 
 
-  // function activatePaddle2() {
-  // }
+//
+//
+//   // function activatePaddle2() {
+//   // }
 });
 
 

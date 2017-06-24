@@ -5,8 +5,17 @@ function Ball(x, y, paddle1, paddle2) {
 Ball.prototype.randomDirection = function() {};
 
 Ball.prototype.move = function() {
-  while ($('#ball').css('margin-left')=="0px") {
-    $("#ball").css("margin-left","1100px");
+  setInterval(ball.move, 50);
+  console.log("entrando a funcion");
+  var aaa = parseInt($('#ball').css('margin-left'));
+  console.log(aaa);
+  if (aaa !== "1100px") {
+    aaa += 10;
+    console.log(aaa);
+    $("#ball").css("margin-left", "aaa");
+  }
+  if ($('#ball').css('margin-top') !== "500px") {
+    $("#ball").css("margin-top", "+=10px");
   }
 };
 
